@@ -15,8 +15,8 @@
             "--color-tertiary-contrast-rgb": "0,0,0"
         },
         "dark": {
-            "--color-primary": "#e0e0e0",
-            "--color-primary-rgb": "224,224,224",
+            "--color-primary": "#bbcd32",
+            "--color-primary-rgb": "187,205,50",
             "--color-primary-contrast": "#000000",
             "--color-primary-contrast-rgb": "0,0,0",
             "--color-secondary": "#ebd3f8",

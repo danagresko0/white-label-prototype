@@ -11,14 +11,15 @@
     --custom-color-tertiary-contrast: #000000;
     --custom-color-tertiary-contrast-rgb: 0,0,0;
     --custom-color-tertiary-rgb: 172,220,184;
+
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-    --custom-color-primary: #e0e0e0;
+    --custom-color-primary: #bbcd32;
     --custom-color-primary-contrast: #000000;
     --custom-color-primary-contrast-rgb: 0,0,0;
-    --custom-color-primary-rgb: 224,224,224;
+    --custom-color-primary-rgb: 187,205,50;
     --custom-color-secondary: #ebd3f8;
     --custom-color-secondary-contrast: #000000;
     --custom-color-secondary-contrast-rgb: 0,0,0;

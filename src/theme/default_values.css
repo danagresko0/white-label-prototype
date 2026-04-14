@@ -1,17 +1,19 @@
 :root {
-    --pds-color-primary: #eaeaea;
-    --pds-color-primary-rgb: 65,65,65;
+    --pds-color-primary: #ffa810;
+    --pds-color-primary-rgb: 255,168,16;
+        --pds-color-primary-contrast: #000000;
     --pds-color-secondary: #cccccc;
     --pds-color-secondary-rgb: 204,204,204;
     --pds-color-tertiary: #d7cea2;
     --pds-color-tertiary-rgb: 215,206,162;
-     --border-radius: 22px;
+    --border-radius: 22px;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --pds-color-primary: #eeeeee;
         --pds-color-primary-rgb: 0,66,41;
+        --pds-color-primary-contrast: #000000;
         --pds-color-secondary: #cccccc;
         --pds-color-secondary-rgb: 204,204,204;
         --pds-color-tertiary: #d7cea2;
