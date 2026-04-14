@@ -2,3 +2,12 @@
   profile works!
 </p>
 
+<phx-offering
+  title="Premium Plan"
+  subtitle="Get access to all features"
+  [required]="false"
+  [selected]="false"
+  icon="star-outline"
+  (select)="onOfferingSelect()"
+  (learnMore)="onLearnMore()">
+</phx-offering>

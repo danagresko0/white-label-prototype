@@ -1,4 +1,4 @@
-# Ionic White Label Prototype App
+# Ionic White Label PrototypeApp
 
 An Angular-based mobile application built with **Ionic Framework** and **Capacitor**.
 
@@ -61,6 +61,7 @@ The build artifacts will be stored in the `dist/` directory.
 | `npm run watch` | Build with watch mode and configuration |
 | `npm test` | Run unit tests with Karma |
 | `npm run lint` | Run ESLint checks |
+| `npm run mocks` | Run mock database |
 
 ## Project Structure
 

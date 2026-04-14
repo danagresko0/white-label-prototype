@@ -1,0 +1,25 @@
+@media (prefers-color-scheme: light) {
+    :root {
+        --ion-color-primary: var(--custom-color-primary, var(--pds-color-primary));
+        --ion-color-primary-rgb: var(--custom-color-primary-rgb, var(--pds-color-primary-rgb));
+        --ion-color-primary-contrast: var(--custom-color-primary-contrast, var(--pds-color-primary-contrast));
+        --ion-color-primary-contrast-rgb: var(--custom-color-primary-contrast-rgb, var(--pds-color-primary-contrast-rgb));
+        --ion-color-secondary: var(--custom-color-secondary, var(--pds-color-secondary));
+        --ion-color-secondary-rgb: var(--custom-color-secondary-rgb, var(--pds-color-secondary));
+        --ion-color-secondary-contrast: var(--custom-color-secondary-contrast, var(--pds-color-secondary-contrast));
+        --ion-color-secondary-contrast-rgb: var(--custom-color-secondary-contrast-rgb, var(--pds-color-secondary-contrast-rgb));
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --ion-color-primary: var(--custom-color-primary, var(--pds-color-primary));
+        --ion-color-primary-rgb: var(--custom-color-primary-rgb, var(--pds-color-primary-rgb));
+        --ion-color-primary-contrast: var(--custom-color-primary-contrast, var(--pds-color-primary-contrast));
+        --ion-color-primary-contrast-rgb: var(--custom-color-primary-contrast-rgb, var(--pds-color-primary-contrast-rgb));
+        --ion-color-secondary: var(--custom-color-secondary, var(--pds-color-secondary));
+        --ion-color-secondary-rgb: var(--custom-color-secondary-rgb, var(--pds-color-secondary));
+        --ion-color-secondary-contrast: var(--custom-color-secondary-contrast, var(--pds-color-secondary-contrast));
+        --ion-color-secondary-contrast-rgb: var(--custom-color-secondary-contrast-rgb, var(--pds-color-secondary-contrast-rgb));
+    }
+}

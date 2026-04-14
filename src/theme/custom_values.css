@@ -1,0 +1,32 @@
+:root {
+    --custom-color-primary: #54007a;
+    --custom-color-primary-contrast: #ffffff;
+    --custom-color-primary-contrast-rgb: 255,255,255;
+    --custom-color-primary-rgb: 84, 0, 122;
+    --custom-color-secondary: #ebd3f8;
+    --custom-color-secondary-contrast: #000000;
+    --custom-color-secondary-contrast-rgb: 0,0,0;
+    --custom-color-secondary-rgb: 235,211,248;
+    --custom-color-tertiary: #acdcb8;
+    --custom-color-tertiary-contrast: #000000;
+    --custom-color-tertiary-contrast-rgb: 0,0,0;
+    --custom-color-tertiary-rgb: 172,220,184;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --custom-color-primary: #e0e0e0;
+    --custom-color-primary-contrast: #000000;
+    --custom-color-primary-contrast-rgb: 0,0,0;
+    --custom-color-primary-rgb: 224,224,224;
+    --custom-color-secondary: #ebd3f8;
+    --custom-color-secondary-contrast: #000000;
+    --custom-color-secondary-contrast-rgb: 0,0,0;
+    --custom-color-secondary-rgb: 235,211,248;
+    --custom-color-tertiary: #ebfff0;
+    --custom-color-tertiary-contrast: #000000;
+    --custom-color-tertiary-contrast-rgb: 0,0,0;
+    --custom-color-tertiary-rgb: 235,255,240;
+
+    }
+}

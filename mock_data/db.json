@@ -1,0 +1,32 @@
+{
+    "8675309": {
+        "light": {
+            "--color-primary": "#54007a",
+            "--color-primary-rgb": "84, 0, 122",
+            "--color-primary-contrast": "#ffffff",
+            "--color-primary-contrast-rgb": "255,255,255",
+            "--color-secondary": "#ebd3f8",
+            "--color-secondary-rgb": "235,211,248",
+            "--color-secondary-contrast": "#000000",
+            "--color-secondary-contrast-rgb": "0,0,0",
+            "--color-tertiary": "#acdcb8",
+            "--color-tertiary-rgb": "172,220,184",
+            "--color-tertiary-contrast": "#000000",
+            "--color-tertiary-contrast-rgb": "0,0,0"
+        },
+        "dark": {
+            "--color-primary": "#e0e0e0",
+            "--color-primary-rgb": "224,224,224",
+            "--color-primary-contrast": "#000000",
+            "--color-primary-contrast-rgb": "0,0,0",
+            "--color-secondary": "#ebd3f8",
+            "--color-secondary-rgb": "235,211,248",
+            "--color-secondary-contrast": "#000000",
+            "--color-secondary-contrast-rgb": "0,0,0",
+            "--color-tertiary": "#ebfff0",
+            "--color-tertiary-rgb": "235,255,240",
+            "--color-tertiary-contrast": "#000000",
+            "--color-tertiary-contrast-rgb": "0,0,0"
+        }
+    }
+}

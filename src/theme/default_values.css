@@ -1,0 +1,20 @@
+:root {
+    --pds-color-primary: #eaeaea;
+    --pds-color-primary-rgb: 65,65,65;
+    --pds-color-secondary: #cccccc;
+    --pds-color-secondary-rgb: 204,204,204;
+    --pds-color-tertiary: #d7cea2;
+    --pds-color-tertiary-rgb: 215,206,162;
+     --border-radius: 22px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --pds-color-primary: #eeeeee;
+        --pds-color-primary-rgb: 0,66,41;
+        --pds-color-secondary: #cccccc;
+        --pds-color-secondary-rgb: 204,204,204;
+        --pds-color-tertiary: #d7cea2;
+        --pds-color-tertiary-rgb: 215,206,162;
+    }
+}
