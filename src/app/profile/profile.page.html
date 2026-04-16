@@ -1,13 +1,20 @@
-<p>
-  profile works!
-</p>
-
-<phx-offering
-  title="Premium Plan"
-  subtitle="Get access to all features"
-  [required]="false"
-  [selected]="false"
-  icon="star-outline"
-  (select)="onOfferingSelect()"
-  (learnMore)="onLearnMore()">
-</phx-offering>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Demo | Offerings
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="offering-list" >
+  <ng-container *transloco="let t">
+    <phx-offering
+    title="{{t('profile.offering1.title')}}"
+    subtitle="Get access to all features"
+    [required]="false"
+    [selected]="false"
+    icon="person"
+    (select)="onOfferingSelect()"
+    (learnMore)="onLearnMore()">
+  </phx-offering>
+</ng-container>
+</div>
