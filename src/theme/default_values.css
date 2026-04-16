@@ -1,6 +1,6 @@
 :root {
-    --pds-color-primary: #ffa810;
-    --pds-color-primary-rgb: 255,168,16;
+    --pds-color-primary: #26A68A;
+    --pds-color-primary-rgb: 38,166,138;
     --pds-color-primary-contrast: #000000;
     --pds-color-secondary: #cccccc;
     --pds-color-secondary-rgb: 204,204,204;
@@ -11,8 +11,8 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --pds-color-primary: #eeeeee;
-        --pds-color-primary-rgb: 0,66,41;
+        --pds-color-primary: #27EAC5;
+        --pds-color-primary-rgb: 39,234,197;
         --pds-color-primary-contrast: #000000;
         --pds-color-secondary: #cccccc;
         --pds-color-secondary-rgb: 204,204,204;

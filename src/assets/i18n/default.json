@@ -1,0 +1,11 @@
+{
+  "profile": {
+    "offering1": {
+        "title": "Offering 1"
+    }
+  },
+  "home": {
+    "legal": "Brokerage Services available through Plynk app are provided by Digital Brokerage Services LLC, Member FINRA, SIPC. Plynk app marks are the property of FMR LLC. © 2026 FMR LLC. By continuing on the app you agree to the Privacy Policy.",
+    "forgot_password": "Forgot username or password"
+   }
+}

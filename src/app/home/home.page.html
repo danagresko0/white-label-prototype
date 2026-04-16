@@ -1,18 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Demo | HOME
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
+<div id="home-content" *transloco="let t">
   <div id="container">
     
     <phx-input label="Username" name="username"></phx-input>
   
     <phx-input label="Password" name="password" type="password"></phx-input>
   
-    <ion-button expand="block" (click)="onButtonClick()">Register</ion-button>
+    <ion-button class="register-button" expand="block" (click)="onButtonClick()">Register</ion-button>
+    
+    <a class="forgot_link" href="#" (click)="onForgotPassword($event)">{{t('home.forgot_password')}}</a>
+  
+    <p class="small">{{t('home.legal')}}</p>
   </div>
-</ion-content>
+</div>

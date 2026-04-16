@@ -4,7 +4,6 @@ import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalo
 
 import { routes } from './app/app.routes';
 import { AppComponent } from './app/app.component';
-import { Phoenix } from 'phoenix';
 import { provideHttpClient } from '@angular/common/http';
 import { isDevMode } from '@angular/core';
 import { TranslocoHttpLoader } from './transloco-loader';
@@ -18,11 +17,15 @@ bootstrapApplication(AppComponent, {
     provideHttpClient(), 
     provideTransloco({
         config: { 
-          availableLangs: ['en'],
+          fallbackLang: ['default'],
+          availableLangs: ['default', 'en'],
           defaultLang: 'en',
           // Remove this option if your application doesn't support changing language in runtime.
           reRenderOnLangChange: true,
           prodMode: !isDevMode(),
+          missingHandler: {
+            useFallbackTranslation: true,
+          },
         },
         loader: TranslocoHttpLoader
       }),
