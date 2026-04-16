@@ -1,18 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Demo
-    </ion-title>
+    <!-- Title removed as requested; toolbar retained for layout -->
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div id="container">
-    
-    <phx-input label="Username" name="username"></phx-input>
-  
-    <phx-input label="Password" name="password" type="password"></phx-input>
-  
-    <ion-button expand="block" (click)="onButtonClick()">Register</ion-button>
+    <h2>Welcome</h2>
+    <!-- Username and Password fields removed as requested -->
+    <ion-button expand="block" (click)="onLoginClick()">Already Login</ion-button>
+    <ion-button expand="block" color="primary" (click)="onRegisterClick()">Register New User</ion-button>
   </div>
 </ion-content>
