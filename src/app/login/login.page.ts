@@ -7,16 +7,10 @@ import { OktaAuth } from '@okta/okta-auth-js';
 import { Capacitor } from '@capacitor/core';
 import {
   IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonContent,
   IonText,
-  IonItem,
-  IonLabel,
-  IonInput
 } from '@ionic/angular/standalone';
+import { PhxInput } from 'phoenix';
+import { TranslocoDirective } from '@jsverse/transloco';
 
 import { environment } from '../../environments/environment';
 
@@ -36,15 +30,9 @@ interface AuthnResponse {
     FormsModule,
     HttpClientModule,
     IonButton,
-    IonCard,
-    IonCardContent,
-    IonCardHeader,
-    IonCardTitle,
-    IonContent,
     IonText,
-    IonItem,
-    IonLabel,
-    IonInput
+    PhxInput,
+    TranslocoDirective
   ]
 })
 export class LoginPage {

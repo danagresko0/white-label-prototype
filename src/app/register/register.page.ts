@@ -6,17 +6,10 @@ import { Router } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import {
   IonButton,
-  IonCard,
-  IonCardContent,
-  IonCardHeader,
-  IonCardTitle,
-  IonContent,
-  IonInput,
-  IonItem,
-  IonLabel,
   IonText
 } from '@ionic/angular/standalone';
 import { environment } from '../../environments/environment';
+import { PhxInput } from 'phoenix';
 
 interface RegisterForm {
   firstName: string;
@@ -35,15 +28,8 @@ interface RegisterForm {
     NgIf,
     HttpClientModule,
     IonButton,
-    IonCard,
-    IonCardContent,
-    IonCardHeader,
-    IonCardTitle,
-    IonContent,
-    IonInput,
-    IonItem,
-    IonLabel,
-    IonText
+    IonText,
+    PhxInput
   ]
 })
 export class RegisterPage {

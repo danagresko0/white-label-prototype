@@ -1,1 +1,59 @@
-/* Add your login page styles here */
+#container {
+  text-align: center;
+
+}
+#background-content {
+  background: transparent;
+}
+
+#home-content {
+  --background: transparent;
+  background:  transparent url('/assets/home_logo.png') no-repeat top center;
+  background-size: contain;
+  align-items: baseline;
+  display: flex;
+  flex: 1;
+  height: auto;
+
+  .forgot_link {
+    display: block;
+    margin-bottom: 45px;
+  }
+
+  .small {
+    font-size: 12px;
+    line-height: 18px;
+    color: #8c8c8c;
+    text-align: left;
+  }
+}
+
+#container {
+  padding: 0 24px;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: 24px;
+}
+
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.register-button {
+  margin-bottom: 24px;
+}

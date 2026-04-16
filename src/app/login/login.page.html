@@ -1,23 +1,16 @@
-<ion-content class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Login</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="stacked">Username</ion-label>
-        <ion-input [(ngModel)]="username" name="username" type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">Password</ion-label>
-        <ion-input [(ngModel)]="password" name="password" type="password"></ion-input>
-      </ion-item>
-      <ion-button expand="block" [disabled]="loading" (click)="login()">
-        {{ loading ? 'Logging in...' : 'Login' }}
-      </ion-button>
-      <ion-text color="danger" *ngIf="errorMessage">
+<div id="home-content" *transloco="let t">
+  <div id="container">
+    
+    <phx-input [(ngModel)]="username" label="Username" name="username"></phx-input>
+  
+    <phx-input [(ngModel)]="password" label="Password" name="password" type="password"></phx-input>
+  
+    <ion-button class="register-button" [disabled]="loading"  expand="block"  (click)="login()">{{ loading ? 'Logging in...' : 'Login' }}</ion-button>
+          <ion-text color="danger" *ngIf="errorMessage">
         <p>{{ errorMessage }}</p>
       </ion-text>
-    </ion-card-content>
-  </ion-card>
-</ion-content>
+    <a class="forgot_link" href="#" >{{t('home.forgot_password')}}</a>
+  
+    <p class="small">{{t('home.legal')}}</p>
+  </div>
+</div>
