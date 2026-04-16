@@ -8,6 +8,10 @@
         --ion-color-secondary-rgb: var(--custom-color-secondary-rgb, var(--pds-color-secondary));
         --ion-color-secondary-contrast: var(--custom-color-secondary-contrast, var(--pds-color-secondary-contrast));
         --ion-color-secondary-contrast-rgb: var(--custom-color-secondary-contrast-rgb, var(--pds-color-secondary-contrast-rgb));
+        --ion-color-tertiary: var(--custom-color-tertiary, var(--pds-color-tertiary));
+        --ion-color-tertiary-rgb: var(--custom-color-tertiary-rgb, var(--pds-color-tertiary));
+        --ion-color-tertiary-contrast: var(--custom-color-tertiary-contrast, var(--pds-color-tertiary-contrast));
+        --ion-color-tertiary-contrast-rgb: var(--custom-color-tertiary-contrast-rgb, var(--pds-color-tertiary-contrast-rgb));
     }
 }
 
@@ -21,5 +25,9 @@
         --ion-color-secondary-rgb: var(--custom-color-secondary-rgb, var(--pds-color-secondary));
         --ion-color-secondary-contrast: var(--custom-color-secondary-contrast, var(--pds-color-secondary-contrast));
         --ion-color-secondary-contrast-rgb: var(--custom-color-secondary-contrast-rgb, var(--pds-color-secondary-contrast-rgb));
+        --ion-color-tertiary: var(--custom-color-tertiary, var(--pds-color-tertiary));
+        --ion-color-tertiary-rgb: var(--custom-color-tertiary-rgb, var(--pds-color-tertiary));
+        --ion-color-tertiary-contrast: var(--custom-color-tertiary-contrast, var(--pds-color-tertiary-contrast));
+        --ion-color-tertiary-contrast-rgb: var(--custom-color-tertiary-contrast-rgb, var(--pds-color-tertiary-contrast-rgb));
     }
 }
