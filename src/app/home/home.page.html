@@ -6,7 +6,8 @@
   
     <phx-input label="Password" name="password" type="password"></phx-input>
   
-    <ion-button class="register-button" expand="block" (click)="onButtonClick()">Register</ion-button>
+    <ion-button class="register-button" expand="block" (click)="onLoginClick()">Login</ion-button>
+    <ion-button class="register-button" expand="block" (click)="onRegisterClick()">Register</ion-button>
     
     <a class="forgot_link" href="#" (click)="onForgotPassword($event)">{{t('home.forgot_password')}}</a>
   

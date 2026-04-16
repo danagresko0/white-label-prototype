@@ -1,0 +1,11 @@
+{
+  "/okta": {
+    "target": "https://trial-2653197.okta.com",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/okta": ""
+    },
+    "logLevel": "debug"
+  }
+}
