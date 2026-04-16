@@ -22,8 +22,8 @@ TENANT_API_URL="${API_URL}/${TENANT_ID}"
 RESPONSE=$(curl -s "$TENANT_API_URL")
 
 # Extract light and dark mode responses
-LIGHT_RESPONSE=$(echo "$RESPONSE" | jq -r '.light')
-DARK_RESPONSE=$(echo "$RESPONSE" | jq -r '.dark')
+LIGHT_RESPONSE=$(echo "$RESPONSE" | jq -r '.themes.light')
+DARK_RESPONSE=$(echo "$RESPONSE" | jq -r '.themes.dark')
 
 # Generate CSS variables for light mode
 CSS_VARS_LIGHT=""
