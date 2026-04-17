@@ -42,5 +42,28 @@
         "config": {
             "home": "White-label Demo"
         }
+    },
+    "plynk": {
+        "themes": {
+            "light": {
+                "--color-primary": "#26A68A",
+                "--color-primary-rgb": "38,166,138",
+                "--color-primary-contrast": "#FFFFFF",
+                "--color-secondary": "#cccccc",
+                "--color-secondary-rgb": "204,204,204",
+                "--color-tertiary": "#d7cea2",
+                "--color-tertiary-rgb": "215,206,162",
+                "--border-radius": "22px"
+            },
+            "dark": {
+                "--color-primary": "#27EAC5",
+                "--color-primary-rgb": "39,234,197",
+                "--color-primary-contrast": "#000000",
+                "--color-secondary": "#cccccc",
+                "--color-secondary-rgb": "204,204,204",
+                "--color-tertiary": "#d7cea2",
+                "--color-tertiary-rgb": "215,206,162"
+            }
+        }
     }
 }

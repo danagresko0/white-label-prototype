@@ -62,32 +62,34 @@ export class RegisterPage {
   }
 
   registerUser(): void {
-    this.successMessage = '';
-    this.errorMessage = '';
 
-    const firstName = this.form.firstName.trim();
-    const lastName = this.form.lastName.trim();
-    const email = this.form.email.trim().toLowerCase();
-    const login = this.form.login.trim().toLowerCase();
-    const password = this.form.password;
+    this.router.navigate(['/login']);
+    // this.successMessage = '';
+    // this.errorMessage = '';
 
-    if (!firstName || !lastName || !email || !login || !password) {
-      this.errorMessage = 'Please complete first name, last name, email, login, and password.';
-      return;
-    }
+    // const firstName = this.form.firstName.trim();
+    // const lastName = this.form.lastName.trim();
+    // const email = this.form.email.trim().toLowerCase();
+    // const login = this.form.login.trim().toLowerCase();
+    // const password = this.form.password;
 
-    if (!this.emailRegex.test(login)) {
-      this.errorMessage = 'Login must be a valid email address.';
-      return;
-    }
+    // if (!firstName || !lastName || !email || !login || !password) {
+    //   this.errorMessage = 'Please complete first name, last name, email, login, and password.';
+    //   return;
+    // }
 
-    if (!environment.okta.apiToken) {
-      this.errorMessage = 'Missing Okta API token. Add it in environment.ts before registering users.';
-      return;
-    }
+    // if (!this.emailRegex.test(login)) {
+    //   this.errorMessage = 'Login must be a valid email address.';
+    //   return;
+    // }
 
-    this.loading = true;
-    this.registerViaLegacyOktaFlow(firstName, lastName, email, login, password);
+    // if (!environment.okta.apiToken) {
+    //   this.errorMessage = 'Missing Okta API token. Add it in environment.ts before registering users.';
+    //   return;
+    // }
+
+    // this.loading = true;
+    // this.registerViaLegacyOktaFlow(firstName, lastName, email, login, password);
   }
 
   private registerViaLegacyOktaFlow(

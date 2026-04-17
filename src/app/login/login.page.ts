@@ -13,12 +13,28 @@ import { PhxInput } from 'phoenix';
 import { TranslocoDirective } from '@jsverse/transloco';
 
 import { environment } from '../../environments/environment';
+import { UserService } from '../services/user.service';
+
+interface Profile {
+  id: string;
+  firstName: string;
+  lastName: string;
+  login: string;
+}
+
+export interface User {
+  id: string;
+  profile: Profile;
+}
 
 interface AuthnResponse {
   status?: string;
   sessionToken?: string;
   errorSummary?: string;
   errorCauses?: Array<{ errorSummary: string }>;
+  _embedded?: {
+    user: User;
+  };
 }
 
 @Component({
@@ -38,6 +54,7 @@ interface AuthnResponse {
 export class LoginPage {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
+  private readonly userService = inject(UserService);
   private oktaAuth!: OktaAuth;
   private readonly redirectUri: string;
   private readonly clientId: string;
@@ -103,6 +120,7 @@ export class LoginPage {
         // eslint-disable-next-line no-console
         console.log('JWT Token:', jwt);
       }
+      this.userService.setUser(authnRes._embedded);
       this.loading = false;
       await this.router.navigate(['/profile'], { state: { jwt } });
     } catch (error: any) {

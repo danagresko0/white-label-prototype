@@ -6,6 +6,9 @@
   </ion-toolbar>
 </ion-header>
 <div class="offering-list" >
+
+  <h2>Welcome {{user?.user?.profile?.firstName}} {{user?.user?.profile?.lastName}}</h2>
+  <h3>Explore Accounts</h3>
   <ng-container *transloco="let t">
     <phx-offering
     title="{{t('profile.offering1.title')}}"

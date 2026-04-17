@@ -8,6 +8,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { isDevMode } from '@angular/core';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
+import { UserService } from './app/services/user.service';
 
 bootstrapApplication(AppComponent, {
   providers: [
@@ -15,6 +16,7 @@ bootstrapApplication(AppComponent, {
     provideIonicAngular(),
     provideRouter(routes, withPreloading(PreloadAllModules)), 
     provideHttpClient(), 
+    UserService,
     provideTransloco({
         config: { 
           fallbackLang: ['default'],
