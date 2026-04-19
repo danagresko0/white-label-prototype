@@ -18,6 +18,10 @@ export const routes: Routes = [
     loadComponent: () => import('./login/login.page').then((m) => m.LoginPage),
   },
   {
+    path: 'login/callback',
+    loadComponent: () => import('./login/login-callback.page').then(m => m.LoginCallbackPage),
+  },
+  {
     path: '',
     redirectTo: 'landing',
     pathMatch: 'full',

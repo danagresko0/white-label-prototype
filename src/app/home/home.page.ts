@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import {  IonButton } from '@ionic/angular/standalone';
 import { PhxInput } from 'phoenix';
 import { TranslocoDirective } from '@jsverse/transloco';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Component({
@@ -13,7 +14,7 @@ import { Router } from '@angular/router';
 })
 
 export class HomePage {
-  constructor(private router: Router) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   onLoginClick() {
     this.router.navigate(['/login']);
@@ -26,5 +27,18 @@ export class HomePage {
   onForgotPassword(event: Event) {
     event.preventDefault();
     console.log('Forgot password clicked!');
+  }
+
+  loginWithOktaFederation() {
+    this.http.post<any>('/api/login_2', {}).subscribe({
+      next: (res) => {
+        if (res && res.authorizeUrl) {
+          window.location.href = res.authorizeUrl;
+        }
+      },
+      error: (err) => {
+        alert('Federated login failed: ' + (err.error?.error || err.message));
+      }
+    });
   }
 }

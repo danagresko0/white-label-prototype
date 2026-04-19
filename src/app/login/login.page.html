@@ -6,6 +6,9 @@
     <phx-input [(ngModel)]="password" label="Password" name="password" type="password"></phx-input>
   
     <ion-button class="register-button" [disabled]="loading"  expand="block"  (click)="login()">{{ loading ? 'Logging in...' : 'Login' }}</ion-button>
+    <ion-button expand="block" color="secondary" (click)="loginWithOktaFederation()">
+      Login with Okta (Federated via Auth0)
+    </ion-button>
           <ion-text color="danger" *ngIf="errorMessage">
         <p>{{ errorMessage }}</p>
       </ion-text>

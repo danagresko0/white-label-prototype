@@ -38,6 +38,19 @@ interface AuthnResponse {
 export class LoginPage {
   private readonly http = inject(HttpClient);
   private readonly router = inject(Router);
+
+  loginWithOktaFederation() {
+    this.http.post<any>('/api/login_2', {}).subscribe({
+      next: (res) => {
+        if (res && res.authorizeUrl) {
+          window.location.href = res.authorizeUrl;
+        }
+      },
+      error: (err) => {
+        alert('Federated login failed: ' + (err.error?.error || err.message));
+      }
+    });
+  }
   private oktaAuth!: OktaAuth;
   private readonly redirectUri: string;
   private readonly clientId: string;
@@ -66,50 +79,31 @@ export class LoginPage {
     });
   }
 
-  async login(): Promise<void> {
+  login(): void {
     this.errorMessage = '';
-    if (!this.username.trim() || !this.password.trim()) {
-      this.errorMessage = 'Please enter your username and password.';
+    if (!this.username || !this.password) {
+      this.errorMessage = 'Please enter username and password.';
       return;
     }
     this.loading = true;
-    try {
-      // Step 1: Authenticate with Okta via proxy
-      const authnRes = await this.http
-        .post<AuthnResponse>(
-          '/okta/api/v1/authn',
-          { username: this.username.trim(), password: this.password },
-          { headers: new HttpHeaders({ 'Content-Type': 'application/json', 'Accept': 'application/json' }) }
-        )
-        .toPromise();
+    // Create a hidden form and submit via POST so browser follows 302 redirect
+    const formEl = document.createElement('form');
+    formEl.method = 'POST';
+    formEl.action = '/api/login';
+    formEl.style.display = 'none';
 
-      if (!authnRes || authnRes.status !== 'SUCCESS' || !authnRes.sessionToken) {
-        const causes = authnRes?.errorCauses?.map(c => c.errorSummary).join(' ') || '';
-        this.errorMessage = authnRes?.errorSummary || causes || 'Authentication failed.';
-        this.loading = false;
-        return;
-      }
+    const usernameInput = document.createElement('input');
+    usernameInput.name = 'username';
+    usernameInput.value = this.username;
+    formEl.appendChild(usernameInput);
 
-      // Step 2: Exchange session token for tokens (silent, no redirect)
-      const { tokens } = await this.oktaAuth.token.getWithoutPrompt({
-        sessionToken: authnRes.sessionToken,
-        scopes: environment.okta.scopes
-      });
-      this.oktaAuth.tokenManager.setTokens(tokens);
-      const jwt = tokens.idToken?.idToken || tokens.accessToken?.accessToken || '';
-      if (jwt) {
-        localStorage.setItem('okta_jwt', jwt);
-        // Print JWT to browser console
-        // eslint-disable-next-line no-console
-        console.log('JWT Token:', jwt);
-      }
-      this.loading = false;
-      await this.router.navigate(['/profile'], { state: { jwt } });
-    } catch (error: any) {
-      this.loading = false;
-      const errBody = error?.error;
-      const causes = errBody?.errorCauses?.map((c: any) => c.errorSummary).join(' ') || '';
-      this.errorMessage = errBody?.errorSummary || causes || error?.message || 'Login failed.';
-    }
+    const passwordInput = document.createElement('input');
+    passwordInput.name = 'password';
+    passwordInput.value = this.password;
+    formEl.appendChild(passwordInput);
+
+    document.body.appendChild(formEl);
+    formEl.submit();
+    // No further code runs, browser navigates away
   }
 }
