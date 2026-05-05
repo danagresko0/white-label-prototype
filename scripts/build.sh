@@ -36,6 +36,15 @@ if [ -f "../../$@/assets.zip" ]; then
     echo "No translation files found."
   fi
 
+  # if there is an icon directory in the unzipped assets, move the contents of it to src/assets/i18n
+  if [ -d "./assets/icons" ]; then
+    echo "Moving icons files..."
+    mv ./assets/icons/* src/assets/icon/
+    rm -rf ./assets/icons
+  else 
+    echo "No icon files found."
+  fi
+
   mv ./assets/* src/assets/
   rm -rf ./assets
 

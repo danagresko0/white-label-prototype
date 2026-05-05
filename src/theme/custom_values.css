@@ -1,9 +1,35 @@
 :root {
+    --pds-button-font-size: 14px;
+    --pds-button-primary-default: #2563EB;
+    --pds-card-border-radius: 0;
+    --pds-card-divider: #E2E8F0;
+    --pds-chips-info-background: #E0f2FE;
+    --pds-color-primary: #2563EB;
+    --pds-color-secondary: #1E293B;
+    --pds-color-surface: #f1f1f1;
+    --pds-color-tertiary: #99C5E9;
+    --pds-demo-icon-fill: #334155;
+    --pds-foreground-accent-primary: #A9C8E1;
+    --pds-foreground-accent-secondary: #F3F7FB;
+    --pds-primary-text-disabled: #737373;
 
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+    --pds-color-button-font-size: 14px;
+    --pds-color-button-primary-default: #2563EB;
+    --pds-color-card-border-radius: 0;
+    --pds-color-card-divider: #E2E8F0;
+    --pds-color-chips-info-background: #E0f2FE;
+    --pds-color-color-primary: #2563EB;
+    --pds-color-color-secondary: #1E293B;
+    --pds-color-color-surface: #f1f1f1;
+    --pds-color-color-tertiary: #99C5E9;
+    --pds-color-demo-icon-fill: #334155;
+    --pds-color-foreground-accent-primary: #F3F7FB;
+    --pds-color-foreground-accent-secondary: #F3F7FB;
+    --pds-color-primary-text-disabled: #737373;
 
     }
 }

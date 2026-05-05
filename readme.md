@@ -117,6 +117,17 @@ To build and deploy for iOS/Android using Capacitor:
 
 For more information, visit [Capacitor Documentation](https://capacitorjs.com/).
 
+## How CSS Variables work
+The PHX Component library is imported with all of the colors pointing to the consuming library variable name with the prefix "--pds" and will fall back to the white-label color definition  prefixed with "--phx"... The consuming application defines the color with the "--pds" prefix, can be overwritten with the "--custom" color from the brand theme OR falls back to the "--phx" white label color. 
+
+The component library color definition:
+`background-color: var(--pds-color-surface, var(--phx-color-surface));`
+
+The application variable definition:
+`--pds-color-surface: var(--custom-color-surface, var(--phx-color-surface));`
+
+`--custom-color-surface` is generated from the build script
+
 ## Troubleshooting
 
 - **Port already in use**: If port 4200 is in use, specify a different port: `ng serve --port 4201`

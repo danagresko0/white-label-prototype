@@ -1,22 +1,26 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { IonToolbar, IonHeader, IonTitle } from '@ionic/angular/standalone';
+import { IonToolbar, IonHeader, IonTitle,IonButtons, IonButton, IonIcon } from '@ionic/angular/standalone';
 // import the phoenix linked library
-import { PhxOffering } from 'phoenix';
+import { PhxOffering, PhxProgressHeader, PhxHeader } from 'phoenix';
 import { TranslocoDirective } from '@jsverse/transloco';
 import { UserService } from '../services/user.service';
-import { User } from '../login/login.page';
+import { addIcons } from 'ionicons';
+import { personOutline, cashOutline } from 'ionicons/icons';
+import customIcons from '../../assets/icon/icons.json';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.page.html',
   styleUrls: ['./profile.page.scss'],
-  imports: [PhxOffering, IonToolbar, IonHeader, IonTitle, TranslocoDirective],
+  imports: [PhxOffering, PhxProgressHeader, PhxHeader, IonButton, IonToolbar, IonHeader, IonTitle, IonButtons, IonIcon, TranslocoDirective],
 })
 export class ProfilePage  implements OnInit {
   private readonly userService = inject(UserService);
   public user: any | null = null;
 
-  constructor() { }
+  constructor() { 
+    addIcons({ personOutline, cashOutline , ...customIcons});
+  }
 
   ngOnInit() {
     this.user = this.userService.getUser();

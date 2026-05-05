@@ -1,0 +1,27 @@
+{
+  "home": {
+    "forgot_password": "Forgot my password",
+    "legal": "Brokerage Services available through Plynk app are provided by Digital Brokerage Services LLC, Member FINRA, SIPC. Plynk app marks are the property of FMR LLC. © 2026 FMR LLC. By continuing on the app you agree to the DBS Terms of Use and Privacy Policy."
+   },
+    "landing": {
+      "welcome": "With Plynk there are no order flow kickbacks, just better prices for you"
+  },
+  "profile": {
+    "offering1": {
+      "title": "Individual",
+      "subtitle": "Taxable investment account"
+    },
+    "offering2": {
+      "title": "Crypto",
+      "subtitle": "Investment account for digital assets, provided by Paxos  "
+    },
+    "offering3": {
+      "title": "Roth IRA",
+      "subtitle": "Retirement account with tax-free potential growth"
+    },
+    "progressHeader": {
+      "title": "Explore accounts",
+      "subtitle": "Choose accounts that fit your goals, or learn more first."
+    }
+  }
+}

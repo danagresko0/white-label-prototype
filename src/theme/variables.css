@@ -1,4 +1,4 @@
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         --ion-color-primary: var(--custom-color-primary, var(--pds-color-primary));
         --ion-color-primary-rgb: var(--custom-color-primary-rgb, var(--pds-color-primary-rgb));
@@ -12,6 +12,8 @@
         --ion-color-tertiary-rgb: var(--custom-color-tertiary-rgb, var(--pds-color-tertiary));
         --ion-color-tertiary-contrast: var(--custom-color-tertiary-contrast, var(--pds-color-tertiary-contrast));
         --ion-color-tertiary-contrast-rgb: var(--custom-color-tertiary-contrast-rgb, var(--pds-color-tertiary-contrast-rgb));
+        --pds-color-surface: var(--custom-color-surface, var(--phx-color-surface));
+        --pds-color-primary: var(--custom-color-primary, var(--phx-color-primary));
     }
 }
 
@@ -29,5 +31,9 @@
         --ion-color-tertiary-rgb: var(--custom-color-tertiary-rgb, var(--pds-color-tertiary));
         --ion-color-tertiary-contrast: var(--custom-color-tertiary-contrast, var(--pds-color-tertiary-contrast));
         --ion-color-tertiary-contrast-rgb: var(--custom-color-tertiary-contrast-rgb, var(--pds-color-tertiary-contrast-rgb));
+        --pds-color-surface: var(--custom-color-surface, var(--phx-color-surface));
+        --pds-color-primary: var(--custom-color-primary, var(--phx-color-primary));
     }
-}
+} */
+
+

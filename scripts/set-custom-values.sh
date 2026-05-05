@@ -28,8 +28,9 @@ DARK_RESPONSE=$(echo "$RESPONSE" | jq -r '.themes.dark')
 # Generate CSS variables for light mode
 CSS_VARS_LIGHT=""
 for key in $(echo "$LIGHT_RESPONSE" | jq -r 'keys[]'); do
-    if [[ "$key" == --color-* ]]; then
-        custom_key=$(echo "$key" | sed 's/--color-/--custom-color-/')
+    if [[ "$key" == --custom-* ]]; then
+        custom_key=$(echo "$key" | sed 's/--custom-/--pds-/')
+        echo "Processing key: $key -> $custom_key"
         value=$(echo "$LIGHT_RESPONSE" | jq -r ".[\"$key\"]")
         CSS_VARS_LIGHT="${CSS_VARS_LIGHT}    $custom_key: $value;
 "
@@ -39,8 +40,8 @@ done
 # Generate CSS variables for dark mode
 CSS_VARS_DARK=""
 for key in $(echo "$DARK_RESPONSE" | jq -r 'keys[]'); do
-    if [[ "$key" == --color-* ]]; then
-        custom_key=$(echo "$key" | sed 's/--color-/--custom-color-/')
+    if [[ "$key" == --custom-* ]]; then
+        custom_key=$(echo "$key" | sed 's/--custom-/--pds-color-/')
         value=$(echo "$DARK_RESPONSE" | jq -r ".[\"$key\"]")
         CSS_VARS_DARK="${CSS_VARS_DARK}    $custom_key: $value;
 "

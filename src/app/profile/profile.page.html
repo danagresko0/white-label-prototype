@@ -1,23 +1,50 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Demo | Offerings
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<phx-header/>
 <div class="offering-list" >
-
-  <h2>Welcome {{user?.user?.profile?.firstName}} {{user?.user?.profile?.lastName}}</h2>
-  <h3>Explore Accounts</h3>
-  <ng-container *transloco="let t">
-    <phx-offering
-    title="{{t('profile.offering1.title')}}"
-    subtitle="Get access to all features"
-    [required]="false"
-    [selected]="false"
-    icon="person"
-    (select)="onOfferingSelect()"
-    (learnMore)="onLearnMore()">
-  </phx-offering>
+<ng-container *transloco="let t">
+  <phx-progress-header
+    title="{{t('profile.progressHeader.title')}}"
+    subtitle="{{t('profile.progressHeader.subtitle')}}"
+    [progress]="0.5"></phx-progress-header>
+    <div class="row">
+    <div class="offering-container">
+      <phx-offering
+        title="{{t('profile.offering1.title')}}"
+        subtitle="{{t('profile.offering1.subtitle')}}"
+        [required]="false"
+        [selected]="false"
+        (select)="onOfferingSelect()"
+        icon="person-outline"
+        (learnMore)="onLearnMore()">
+      </phx-offering>
+      <phx-offering
+        title="{{t('profile.offering2.title')}}"
+        subtitle="{{t('profile.offering2.subtitle')}}"
+        [required]="false"
+        [selected]="false"
+        (select)="onOfferingSelect()"
+        icon="crypto"
+        (learnMore)="onLearnMore()">
+      </phx-offering>
+      <phx-offering
+        title="{{t('profile.offering3.title')}}"
+        subtitle="{{t('profile.offering3.subtitle')}}"
+        [required]="false"
+        [selected]="false"
+        (select)="onOfferingSelect()"
+        icon="roth"
+        (learnMore)="onLearnMore()">
+      </phx-offering>
+      <phx-offering
+        title="{{t('profile.offering4.title')}}"
+        subtitle="{{t('profile.offering4.subtitle')}}"
+        [required]="false"
+        [selected]="false"
+        (select)="onOfferingSelect()"
+        icon="cash-outline"
+        (learnMore)="onLearnMore()">
+      </phx-offering>
+      <ion-button class="register-button" expand="block" >Continue</ion-button>
+      </div>
+      </div>
 </ng-container>
 </div>

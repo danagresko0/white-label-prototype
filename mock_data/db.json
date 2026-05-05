@@ -2,32 +2,34 @@
     "8675309": {
         "themes": {
             "light": {
-                "--color-primary": "#041f3f",
-                "--color-primary-rgb": "4, 31, 63",
-                "--color-primary-contrast": "#ffffff",
-                "--color-primary-contrast-rgb": "255,255,255",
-                "--color-secondary": "#4f88bb",
-                "--color-secondary-rgb": "79,136,187",
-                "--color-secondary-contrast": "#000000",
-                "--color-secondary-contrast-rgb": "0,0,0",
-                "--color-tertiary": "#acdcb8",
-                "--color-tertiary-rgb": "172,220,184",
-                "--color-tertiary-contrast": "#000000",
-                "--color-tertiary-contrast-rgb": "0,0,0"
+                "--custom-color-primary": "#2563EB",
+                "--custom-color-secondary": "#1E293B",
+                "--custom-color-tertiary": "#99C5E9",
+                "--custom-color-surface": "#f1f1f1",
+                "--custom-button-primary-default": "#2563EB",
+                "--custom-foreground-accent-primary": "#A9C8E1",
+                "--custom-foreground-accent-secondary": "#F3F7FB",
+                "--custom-button-font-size": "14px",
+                "--custom-chips-info-background": "#E0f2FE",
+                "--custom-demo-icon-fill": "#334155",
+                "--custom-card-border-radius" : "0",
+                "--custom-card-divider": "#E2E8F0",
+                "--custom-primary-text-disabled": "#737373"
             },
             "dark": {
-                "--color-primary": "#041f3f",
-                "--color-primary-rgb": "4, 31, 63",
-                "--color-primary-contrast": "#ffffff",
-                "--color-primary-contrast-rgb": "255,255,255",
-                "--color-secondary": "#4f88bb",
-                "--color-secondary-rgb": "79,136,187",
-                "--color-secondary-contrast": "#000000",
-                "--color-secondary-contrast-rgb": "0,0,0",
-                "--color-tertiary": "#acdcb8",
-                "--color-tertiary-rgb": "172,220,184",
-                "--color-tertiary-contrast": "#000000",
-                "--color-tertiary-contrast-rgb": "0,0,0"
+                "--custom-color-primary": "#2563EB",
+                "--custom-color-secondary": "#1E293B",
+                "--custom-color-tertiary": "#99C5E9",
+                "--custom-color-surface": "#f1f1f1",
+                "--custom-button-primary-default": "#2563EB",
+                "--custom-foreground-accent-primary": "#F3F7FB",
+                "--custom-foreground-accent-secondary": "#F3F7FB",
+                "--custom-button-font-size": "14px",
+                "--custom-chips-info-background": "#E0f2FE",
+                "--custom-demo-icon-fill": "#334155",
+                "--custom-card-border-radius" : "0",
+                "--custom-card-divider": "#E2E8F0",
+                "--custom-primary-text-disabled": "#737373"
             }
         },
         "manifest": {
@@ -53,7 +55,8 @@
                 "--color-secondary-rgb": "204,204,204",
                 "--color-tertiary": "#d7cea2",
                 "--color-tertiary-rgb": "215,206,162",
-                "--border-radius": "22px"
+                "--border-radius": "22px",
+                "--color-surface": "#474747"
             },
             "dark": {
                 "--color-primary": "#27EAC5",
@@ -62,7 +65,8 @@
                 "--color-secondary": "#cccccc",
                 "--color-secondary-rgb": "204,204,204",
                 "--color-tertiary": "#d7cea2",
-                "--color-tertiary-rgb": "215,206,162"
+                "--color-tertiary-rgb": "215,206,162",
+                "--color-surface": "#474747"
             }
         }
     }
